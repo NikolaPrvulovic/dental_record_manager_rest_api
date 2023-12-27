@@ -40,6 +40,7 @@ public class Prosthetist {
 
     // set up mapping to Dentist and Patient Entity
     @ManyToMany(mappedBy = "prosthetists")
+    @JsonManagedReference(value = "dentistToProsthetist")
     private List<Dentist> dentists;
 
     @OneToMany(mappedBy = "prosthetist",

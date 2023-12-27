@@ -52,23 +52,25 @@ public class DentistRestController {
     @PutMapping("/dentists")
     public Dentist updateDentist(@RequestBody Dentist dentist){
 
-        Dentist dbDentist = dentistService.findById(Math.toIntExact(dentist.getId()));
+//        Dentist dbDentist = dentistService.findById(Math.toIntExact(dentist.getId()));
+//
+//        // if user adds or updates patient, but like updating dentist, so it does not set null to dentist fields
+//        if(dentist.getPatients() != null) {
+//            dbDentist.setPatients(dentist.getPatients());
+//
+//        // if user updates dentist by id
+//        } else {
+//            dbDentist.setId(dentist.getId());
+//            dbDentist.setEmail(dentist.getEmail());
+//            dbDentist.setFirstName(dentist.getFirstName());
+//            dbDentist.setLastName(dentist.getLastName());
+//            dbDentist.setPhoneNumber(dentist.getPhoneNumber());
+//
+//            dentistService.save(dbDentist);
+//
+//        }
+        Dentist dbDentist = dentistService.save(dentist);
 
-        // if user adds or updates patient, but like updating dentist, so it does not set null to dentist fields
-        if(dentist.getPatients() != null) {
-            dbDentist.setPatients(dentist.getPatients());
-
-        // if user updates dentist by id
-        } else {
-            dbDentist.setId(dentist.getId());
-            dbDentist.setEmail(dentist.getEmail());
-            dbDentist.setFirstName(dentist.getFirstName());
-            dbDentist.setLastName(dentist.getLastName());
-            dbDentist.setPhoneNumber(dentist.getPhoneNumber());
-
-            dentistService.save(dbDentist);
-
-        }
         return dbDentist;
 
 

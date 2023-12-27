@@ -42,6 +42,7 @@ public class Dentist {
             joinColumns = @JoinColumn(name = "dentist_id"),
             inverseJoinColumns = @JoinColumn(name = "prosthetist_id")
     )
+    @JsonBackReference(value = "dentistToProsthetist")
     private List<Prosthetist> prosthetists;
 
     // create constructors
