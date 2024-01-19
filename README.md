@@ -40,7 +40,6 @@ This documentation provides an overview of the REST API for a dental record mana
 **Request Body:**
 ```json
 {
-  "id": 0,
   "firstName": "John",
   "lastName": "Doe",
   "email": "john.doe@example.com",
@@ -106,7 +105,6 @@ This documentation provides an overview of the REST API for a dental record mana
 **Request Body:**
 ```json
 {
-  "id": 0,
   "firstName": "Jane",
   "lastName": "Doe",
   "email": "jane.doe@example.com",
@@ -172,7 +170,6 @@ This documentation provides an overview of the REST API for a dental record mana
 **Request Body:**
 ```json
 {
-  "id": 0,
   "firstName": "Prosthetist",
   "lastName": "Professional",
   "email": "prosthetist@example.com",
